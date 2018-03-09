@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @profile.dob %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @profile.gender %>
+</p>
+
+<p>
+  <strong>Bloog group:</strong>
+  <%= @profile.bloog_group %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @profile.person %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
