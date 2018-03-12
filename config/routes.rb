@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :companies
   resources :book_people
   resources :books
   resources :blogs

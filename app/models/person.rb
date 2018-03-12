@@ -7,4 +7,5 @@ class Person
   embeds_one :profile
   has_many :blogs
   embeds_many :book_people
+  has_many :reviews, as: :reviewable
 end
