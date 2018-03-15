@@ -29,11 +29,11 @@ RSpec.describe ArticlesController, type: :controller do
   # Article. As you add validations to Article, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+      {title: "title",content: "content"}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+     {title: "title1",content: "content1"}
   }
 
   # This should return the minimal set of values that should be in the session
@@ -89,7 +89,7 @@ RSpec.describe ArticlesController, type: :controller do
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
         post :create, params: {article: invalid_attributes}, session: valid_session
-        expect(response).to be_success
+        expect(response).to_not be_success
       end
     end
   end
@@ -97,7 +97,7 @@ RSpec.describe ArticlesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {title: "title",content: "content"}
       }
 
       it "updates the requested article" do
@@ -118,7 +118,7 @@ RSpec.describe ArticlesController, type: :controller do
       it "returns a success response (i.e. to display the 'edit' template)" do
         article = Article.create! valid_attributes
         put :update, params: {id: article.to_param, article: invalid_attributes}, session: valid_session
-        expect(response).to be_success
+        expect(response).to_not be_success
       end
     end
   end
