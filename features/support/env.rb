@@ -55,28 +55,3 @@ ActionController::Base.allow_rescue = false
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
-#Cucumber::Rails::Database.autorun_database_cleaner = false
-# DatabaseCleaner.clean_with :truncation
-# DatabaseCleaner[:mongoid].strategy = :truncation
-# DatabaseCleaner[:mongoid].clean_with(:truncation)
-
-require 'selenium/webdriver'
-
-# url = "http://localhost:3000"
-#
-# capabilities = Selenium::WebDriver::Remote::Capabilities.new
-#
-# capabilities['platform'] = ENV['SELENIUM_PLATFORM'] || 'ANY'
-# capabilities['name'] = 'My first Test'
-# capabilities['browserName'] = ENV['SELENIUM_BROWSER'] || 'chrome'
-# capabilities['version'] = ENV['SELENIUM_VERSION'] if ENV['SELENIUM_VERSION']
-#
-# browser = Selenium::WebDriver.for(:remote, :url => url, :desired_capabilities => capabilities)
-#
-# Before do |scenario|
-# 	@browser = browser
-# end
-#
-# at_exit do
-# 	browser.quit
-# end

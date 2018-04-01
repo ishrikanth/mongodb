@@ -4,6 +4,15 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
+    #request.headers.each do |header|
+      p "**************************************"
+      p request.headers["Content-Type"]
+      p "**************************************"
+      p request.content_type
+      p request.host
+      p request.format
+      p request.headers["HTTP_COOKIE"]
+    #end
     @people = Person.all
   end
 
